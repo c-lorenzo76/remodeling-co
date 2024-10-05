@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.background {
+    background-image: url('./assets/nav-pic-3.webp'); /* Default image */
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 500px) {
+    .background {
+        background-image: url('./assets/nav-pic-3.webp'); /* Smaller version for mobile */
+    }
+}
+
+@media (min-width: 501px) and (max-width: 1000px) {
+    .background {
+        background-image: url('./assets/nav-pic-3.webp'); /* Medium version for tablets */
+    }
+}
+
+@media (min-width: 1001px) {
+    .background {
+        background-image: url('./assets/nav-pic-3.webp'); /* Larger version for desktops */
+    }
+}
