@@ -1,4 +1,4 @@
-// import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt, FaFacebookSquare } from "react-icons/fa";
@@ -6,14 +6,16 @@ import { IoMdMail } from "react-icons/io";
 
 export const Header = () => {
     return (
-        <header className={"font-afacad flex justify-center bg-green-700/40"}>
+        <header className={"bg-[#222831] text-[#EEEEEE] font-afacad flex justify-center"}>
             <div className={"grid grid-cols-2 w-full max-w-6xl mx-2 h-9"}>
                 <div className={"flex justify-start"}>
                     <a className={"flex items-center"}>
                         <FaLocationDot className={"mr-2"}/>
-                        <strong>
-                            Chatham County, NC
-                        </strong>
+                        <Link to={"https://www.google.com/maps/place/Chatham+County,+NC/@35.6941264,-79.8903502,275566m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89acbc9393c41479:0xda597fa59834ed64!8m2!3d35.6978371!4d-79.2902133!16zL20vMG40aHM?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D"}>
+                            <strong className={"font-semibold"}>
+                                Chatham County, NC
+                            </strong>
+                        </Link>
                     </a>
                 </div>
                 <div className={"flex justify-end"}>
@@ -24,7 +26,6 @@ export const Header = () => {
                         </p>
                         <IoMdMail className={"mx-2"} />
                         <FaFacebookSquare className={"mx-2"} />
-
                     </a>
                 </div>
             </div>
