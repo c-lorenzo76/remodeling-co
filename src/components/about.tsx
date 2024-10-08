@@ -10,12 +10,12 @@ import {
 
 export const About = () => {
     return (
-        <div className={"bg-[#393E46] h-[422px] lg:h-[691px] flex flex-col justify-center md:flex-row font-afacad"}>
+        <div className={"bg-[#393E46] h-fit flex flex-col justify-center md:flex-row font-afacad"}>
             <div className={"hidden lg:block lg:flex items-center justify-center ml-14"}>
                 <img src={"../src/assets/living-room.webp"} alt={"Living Room" } className={"rounded shadow-xl"}/>
             </div>
             <div className={"flex flex-col justify-center text-center lg:w-[90%]"}>
-                <Card className={"bg-[#222831] text-[#EEEEEE] w-[80%] mx-auto shadow-lg"}>
+                <Card className={"overflow-x-visible bg-[#222831] text-[#EEEEEE] w-[80%] mx-auto shadow-lg"}>
                     <CardHeader>
                         <CardTitle className={"text-4xl font-semibold"}>
                             Flores and Sons Remodeling

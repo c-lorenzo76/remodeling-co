@@ -8,7 +8,7 @@ import {
 export const Services = () => {
 
     return (
-        <div className={"h-[422px] w-full lg:h-64 bg-[#393E46] text-[#EEEEEE] font-afacad "}>
+        <div className={"h-fit w-full bg-[#393E46] text-[#EEEEEE] font-afacad "}>
             <div className={"w-[80%] lg:w-[85%] mx-auto"}>
                 <Card className={"bg-transparent shadow-none text-[#EEEEEE] flex flex-col lg:flex-row items-center justify-center border-none"} >
                     <CardHeader className={"lg:w-[60%]"}>

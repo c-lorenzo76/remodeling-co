@@ -9,6 +9,12 @@ Created a website for my brother in law's remodeling company.
 
 ## Updates
 10/07 <br>
+I almost finished the landing page haven't had too much time to dedicate 
+towards it. The only thing that needs to be done would be cards for the services
+and then just finish styling the contact component.
+<br>
+<br>
+10/06 <br>
 Didn't get to finish it by today but will probably be able to finish it by the end of the week. 
 I almost finish the landing page. I'd like to just get rid of the shadow that the card left. 
 Not sure how to get rid of it but will try again tomorrow.
