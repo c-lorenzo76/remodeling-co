@@ -23,17 +23,17 @@ export const Navigation = () => {
                 <nav className={"mt-12 md:mt-0 text-[#EEEEEE]"}>
                     <ul className={"flex flex-row md:items-center"}>
                         <li>
-                            <Button className={"font-sans mx-2 text-2xl shadow-none rounded hover:text-gray-300 hover:bg-transparent bg-transparent hover:-translate-y-1 transform transition duration-200 border-none"}>
+                            <Button className={"font-afacad mx-2 text-2xl shadow-none rounded hover:text-gray-300 hover:bg-transparent bg-transparent hover:-translate-y-1 transform transition duration-200 border-none"}>
                                 ABOUT
                             </Button>
                         </li>
                         <li>
-                            <Button className={"font-sans mx-2 text-2xl shadow-none rounded hover:text-gray-300 hover:bg-transparent bg-transparent hover:-translate-y-1 transform transition duration-200 border-none"}>
+                            <Button className={"font-afacad mx-2 text-2xl shadow-none rounded hover:text-gray-300 hover:bg-transparent bg-transparent hover:-translate-y-1 transform transition duration-200 border-none"}>
                                 SERVICES
                             </Button>
                         </li>
                         <li>
-                            <Button className={"font-sans mx-2 text-2xl shadow-none rounded hover:text-gray-300 hover:bg-transparent  bg-transparent hover:-translate-y-1 transform transition duration-200 border-none"}>
+                            <Button className={"font-afacad mx-2 text-2xl shadow-none rounded hover:text-gray-300 hover:bg-transparent  bg-transparent hover:-translate-y-1 transform transition duration-200 border-none"}>
                                 CONTACT
                             </Button>
                         </li>

@@ -11,6 +11,7 @@ import {IoMdMail} from "react-icons/io";
 import {FaPhoneAlt} from "react-icons/fa";
 import {FaLocationDot} from "react-icons/fa6";
 import { MdOutlineAccessTimeFilled } from "react-icons/md";
+import {Button} from "@/components/ui/button.tsx";
 
 
 export const Contact = () => {
@@ -21,7 +22,7 @@ export const Contact = () => {
                 <h1 className={"text-7xl"}>Contact us</h1>
                 <p className={"text-2xl font-light"}>We'll connect with you as soon as we can</p>
             </div>
-            <div className={"lg:w-[70%] mx-auto flex flex-col lg:flex-row"}>
+            <div className={"lg:w-[70%] mx-auto flex flex-col lg:flex-row lg:py-10"}>
                 <div className={"mx-auto space-y-2"}>
                     <Label htmlFor={"fName"}>First Name *</Label>
                     <Input id={"fName"} type={"text"} placeholder={"First Name"}></Input>
@@ -58,6 +59,7 @@ export const Contact = () => {
                     <Input id={"zipcode"} type={"text"}></Input>
                     <Label htmlFor={"message"}>Message</Label>
                     <Textarea/>
+                    <Button className={"w-full"}>Submit</Button>
                 </div>
                 <div className={"w-[80%] lg:w-[50%] mx-auto py-10 lg:py-0"}>
                     <h2 className={"text-3xl underline"}>Contact information</h2>
