@@ -4,18 +4,20 @@ import {About} from "@/components/about"
 import {Services} from "@/components/services";
 import {Contact} from "@/components/contact";
 import {Work} from "@/components/work";
+import {Footer} from "@/components/footer";
 
 export const Home = () => {
 
     return (
-        <div className={"min-h-screen w-full flex-col "}>
+        <div className={"min-h-screen w-full flex-col"}>
             <Header/>
-            <div className={"space-y-8 lg:space-y-10"}>
+            <div className={"space-y-8 lg:space-y-10 bg-[#393E46]"}>
                 <Navigation/>
                 <About/>
                 <Services/>
                 <Work/>
                 <Contact/>
+                <Footer />
             </div>
         </div>
     )
