@@ -40,7 +40,7 @@ export const Navigation = () => {
                     </ul>
                 </nav>
             </div>
-            <div className={"container mx-auto flex items-center justify-between hidden md:block"}>
+            <div className={"container mx-auto items-center justify-between hidden md:block"}>
                 <div className={"w-1/2 md:w-[67%] mx-auto md:ml-2 lg:ml-8"}>
                     <h1 className={"text-[#EEEEEE] font-bold text-7xl max-w-xl"}>RENOVATE YOUR PROPERTY THE EASY WAY</h1>
                     <p className={"text-[#EEEEEE] md:max-w-xl xl:max-w-fit"}>We specialize in all new residential construction , remodeling,

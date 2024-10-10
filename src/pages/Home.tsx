@@ -12,7 +12,7 @@ export const Home = () => {
     return (
         <div className={"min-h-screen w-full flex-col"}>
             <Header/>
-            <div className={"space-y-8 lg:space-y-10 bg-[#393E46] "}>
+            <div className={"space-y-8 lg:space-y-10 bg-[#393E46]"}>
                 <Navigation/>
                 <About/>
                 <Services/>
