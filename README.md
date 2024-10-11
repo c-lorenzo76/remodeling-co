@@ -8,6 +8,9 @@ Created a website for my brother in law's remodeling company.
 >- Server: Golang
 
 ## Updates
+10/10 <br>
+I'm deadass pissed that the inputOTP shit isn't working. I'm going to just do it on a different page and test it. THen I'll implement it onto the page. 
+
 10/09 <br>
 I finished the landing page but I now need to fix the form specifically for the 
 phone input I'm getting some error. Plus I need to add types to the variables. I am getting errors 
