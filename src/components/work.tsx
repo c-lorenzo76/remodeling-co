@@ -1,3 +1,5 @@
+// import Autoplay from "embla-carousel-autoplay"
+// import React from "react"
 import {
     Card,
     CardContent, CardDescription,
@@ -5,10 +7,21 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 
+// import {
+//     Carousel,
+//     CarouselContent,
+//     CarouselItem,
+//     CarouselNext,
+//     CarouselPrevious,
+// } from "@/components/ui/carousel"
+
 export const Work = () => {
+    // const plugin = React.useRef(
+    //     Autoplay({ delay: 2000, stopOnInteraction: true })
+    // )
 
     return (
-        <div className={"h-fit bg-[#393E46]"}>
+        <div className={"h-fit"}>
             <div className={"w-[80%] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4"}>
                 <Card className={"mx-auto w-full max-w-[350px] bg-[#EEEEEE]"}>
                     <CardHeader>

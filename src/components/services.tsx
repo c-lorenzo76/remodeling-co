@@ -8,14 +8,14 @@ import {
 export const Services = () => {
 
     return (
-        <div className={"h-fit w-full bg-[#393E46] text-[#EEEEEE] font-afacad"}>
+        <div className={"h-fit w-full text-[#EEEEEE] font-afacad"}>
             <div className={"w-[80%] lg:w-[85%] mx-auto "}>
                 <Card className={"bg-transparent shadow-none text-[#EEEEEE] flex flex-col lg:flex-row items-center justify-center border-none"} >
-                    <CardHeader className={"lg:w-[60% "}>
+                    <CardHeader className={"lg:w-[60%]"}>
                         <CardTitle className={"font-light text-4xl text-center lg:text-left"}>
                             Our Services
                         </CardTitle>
-                        <CardDescription className={"text-[#EEEEEE] font-bold text-5xl lg:ml-4"}>
+                        <CardDescription className={"text-[#EEEEEE] font-bold text-4xl lg:text-5xl lg:ml-4"}>
                             WHAT WE OFFER
                         </CardDescription>
                     </CardHeader>

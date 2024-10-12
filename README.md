@@ -1,15 +1,22 @@
 # Flores and Sons | Remodeling
 
 ## Background
-Created a website for my brother in law's remodeling company. 
+Created a website for my brother-in-law's remodeling company. 
 
 ## Technology
 >- Client: React | Typescript
 >- Server: Golang
 
 ## Updates
+10/11 <br>
+Okay I managed to fix the inputOTP the way I was originally doing it was stupid. I also added a toast
+for when they post the form. I'm going to start the other pages but this project is practically done. 
+Just need to finish the backend. 
+<br>
+
 10/10 <br>
 I'm deadass pissed that the inputOTP shit isn't working. I'm going to just do it on a different page and test it. THen I'll implement it onto the page. 
+<br>
 
 10/09 <br>
 I finished the landing page but I now need to fix the form specifically for the 

@@ -17,12 +17,12 @@ export const Header = () => {
                 </div>
                 <div className={"flex justify-end"}>
                     <a className={"flex items-center mx-2"}>
-                        <FaPhoneAlt className={"mx-2 h-[14px] w-[14px]"} />
+                        <FaPhoneAlt className={"md:mx-2 h-[14px] w-[14px]"} />
                         <p className={"font-light hidden md:block"}>
                             (919) 799-0388
                         </p>
                         <IoMdMail className={"mx-2"} />
-                        <FaFacebookSquare className={""} />
+                        <FaFacebookSquare />
                     </a>
                 </div>
             </div>

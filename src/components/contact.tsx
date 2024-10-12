@@ -15,8 +15,10 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdOutlineAccessTimeFilled } from "react-icons/md";
 import { Button } from "@/components/ui/button.tsx";
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp";
+import { useToast } from "@/hooks/use-toast"
 
 export const Contact = () => {
+    const { toast } = useToast()
     const [formData, setFormData] = useState({
         fName: "",
         lName: "",
@@ -49,13 +51,24 @@ export const Contact = () => {
             });
 
             if (response.ok) {
-                // Handle success
-                alert("Message sent successfully");
+                toast({
+                    title: "Message Sent",
+                    description: "Your message has been sent successfully. We'll contact you shortly!",
+                    variant: "default",
+                })
             } else {
-                // Handle failure
-                alert("Failed to send message");
+                toast({
+                    title: "Error",
+                    description: "Failed to send the message. Please try again.",
+                    variant: "destructive",
+                })
             }
         } catch (error) {
+            toast({
+                title: "Error occurred",
+                description: "Something went wrong. Please try again later.",
+                variant: "destructive",
+            })
             console.error("Error submitting form:", error);
         }
     };
@@ -68,7 +81,7 @@ export const Contact = () => {
             </div>
             <div className={"lg:w-[70%] mx-auto flex flex-col lg:flex-row lg:py-10"}>
                 <div className={"mx-auto space-y-2"}>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} >
                         <Label htmlFor={"fName"}>First Name *</Label>
                         <Input id={"fName"} name={"fName"} type={"text"} placeholder={"First Name"} value={formData.fName} onChange={handleChange} />
 
@@ -147,6 +160,7 @@ export const Contact = () => {
                         </li>
                         <li className={"flex flex-row items-center"}>
                             <FaFacebookSquare className={"mx-2"} />
+                            Flores and Sons remodeling
                         </li>
                     </ul>
                 </div>
@@ -154,3 +168,5 @@ export const Contact = () => {
         </div>
     );
 };
+
+
