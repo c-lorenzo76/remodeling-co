@@ -1,68 +1,28 @@
-import logo from '../assets/Flores.png'
-import {Button} from "@/components/ui/button";
+import {AuroraBackground} from "@/components/ui/aurora-background";
 import {Link} from "react-router-dom"
-// import {
-//     NavigationMenu,
-//     NavigationMenuContent,
-//     NavigationMenuIndicator,
-//     NavigationMenuItem,
-//     NavigationMenuLink,
-//     NavigationMenuList,
-//     NavigationMenuTrigger,
-//     NavigationMenuViewport,
-// } from "@/components/ui/navigation-menu"
+import {Button} from "@/components/ui/button";
+
+
+// import background from "../assets/nav-pic.webp"
+
+// const links = [
+//     {name: 'About', to: "/About"},
+//     {name: 'Services', to: "/Services"},
+//     {name: 'Gallery', to: "/Services"},
+//     {name: 'Contact', to: "/Contact"},
+// ]
 
 
 export const Navigation = () => {
     return (
-        <div className={"relative font-afacad bg-cover bg-center h-80 md:h-[670px] background"}>
-            <div className={"container mx-auto flex flex-col md:flex-row items-center justify-between p-8"}>
-                <div className={"md:ml-2 lg:ml-16"}>
-                    <img src={logo} alt="Company Logo" className="shadow-lg rounded-2xl object-cover h-44"/>
+        <div className={""}>
+            <AuroraBackground>
+                <div>
+                    <Link to={"/About"}>
+                        <Button>test</Button>
+                    </Link>
                 </div>
-                <nav className={"mt-12 md:mt-0 text-[#EEEEEE]"}>
-                    <ul className={"flex flex-row md:items-center"}>
-                        <li>
-                            <Link to={"/About"}>
-                                <Button
-                                    className={"font-afacad mx-2 text-2xl shadow-none rounded hover:text-gray-300 hover:bg-transparent bg-transparent hover:-translate-y-1 transform transition duration-200 border-none"}>
-                                    ABOUT
-                                </Button>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to={"/Services"}>
-                                <Button
-                                    className={"font-afacad mx-2 text-2xl shadow-none rounded hover:text-gray-300 hover:bg-transparent bg-transparent hover:-translate-y-1 transform transition duration-200 border-none"}>
-                                    SERVICES
-                                </Button>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to={"/Contact"}>
-                                <Button
-                                    className={"font-afacad mx-2 text-2xl shadow-none rounded hover:text-gray-300 hover:bg-transparent  bg-transparent hover:-translate-y-1 transform transition duration-200 border-none"}>
-                                    CONTACT
-                                </Button>
-                            </Link>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div className={"container mx-auto items-center justify-between hidden md:block"}>
-                <div className={"w-1/2 md:w-[67%] mx-auto md:ml-2 lg:ml-8"}>
-                    <h1 className={"text-[#EEEEEE] font-bold text-7xl max-w-xl"}>RENOVATE YOUR PROPERTY THE EASY
-                        WAY</h1>
-                    <p className={"text-[#EEEEEE] md:max-w-xl xl:max-w-fit"}>We specialize in all new residential
-                        construction , remodeling,
-                        repairs
-                        including all interior and exterior home improvement.
-                    </p>
-                    <Button className={"mt-5 rounded hover:-translate-y-1 transform transition duration-200"}>
-                        GET A QUOTE
-                    </Button>
-                </div>
-            </div>
+            </AuroraBackground>
         </div>
     )
 }

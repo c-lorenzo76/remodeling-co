@@ -66,7 +66,7 @@ export const Contact = () => {
         } catch (error) {
             toast({
                 title: "Error occurred",
-                description: "Something went wrong. Please try again later.",
+                description: "Something went wrong. Please try again.",
                 variant: "destructive",
             })
             console.error("Error submitting form:", error);
@@ -83,10 +83,10 @@ export const Contact = () => {
                 <div className={"mx-auto space-y-2"}>
                     <form onSubmit={handleSubmit} >
                         <Label htmlFor={"fName"}>First Name *</Label>
-                        <Input id={"fName"} name={"fName"} type={"text"} placeholder={"First Name"} value={formData.fName} onChange={handleChange} />
+                        <Input id={"fName"} name={"fName"} type={"text"} placeholder={"First Name"} value={formData.fName} onChange={handleChange} required={true} />
 
                         <Label htmlFor={"lName"}>Last Name *</Label>
-                        <Input id={"lName"} name={"lName"} type={"text"} placeholder={"Last Name"} value={formData.lName} onChange={handleChange} />
+                        <Input id={"lName"} name={"lName"} type={"text"} placeholder={"Last Name"} value={formData.lName} onChange={handleChange} required={true} />
 
                         <Label htmlFor={"phone"}>Phone *</Label>
                         <InputOTP
@@ -94,7 +94,8 @@ export const Contact = () => {
                             maxLength={10}
                             pattern={REGEXP_ONLY_DIGITS_AND_CHARS}
                             value={formData.phone}
-                            onChange={handleOTPChange} // Use the new OTP handler
+                            onChange={handleOTPChange}
+                            required={true}
                         >
                             <InputOTPGroup>
                                 <InputOTPSlot index={0} />
@@ -117,16 +118,16 @@ export const Contact = () => {
                         </InputOTP>
 
                         <Label htmlFor={"email"}>Email *</Label>
-                        <Input id={"email"} name={"email"} type={"email"} placeholder={"jdoe@gmail.com"} value={formData.email} onChange={handleChange} />
+                        <Input id={"email"} name={"email"} type={"email"} placeholder={"jdoe@gmail.com"} value={formData.email} onChange={handleChange} required={true} />
 
                         <Label htmlFor={"address"}>Street Address *</Label>
-                        <Input id={"address"} name={"address"} type={"text"} placeholder={"Address"} value={formData.address} onChange={handleChange} />
+                        <Input id={"address"} name={"address"} type={"text"} placeholder={"Address"} value={formData.address} onChange={handleChange} required={true} />
 
                         <Label htmlFor={"city"}>City *</Label>
-                        <Input id={"city"} name={"city"} type={"text"} placeholder={"City"} value={formData.city} onChange={handleChange} />
+                        <Input id={"city"} name={"city"} type={"text"} placeholder={"City"} value={formData.city} onChange={handleChange} required={true} />
 
                         <Label htmlFor={"zipcode"}>Zip code*</Label>
-                        <Input id={"zipcode"} name={"zipcode"} type={"text"} value={formData.zipcode} onChange={handleChange} />
+                        <Input id={"zipcode"} name={"zipcode"} type={"text"} value={formData.zipcode} onChange={handleChange} required={true} />
 
                         <Label htmlFor={"message"}>Message</Label>
                         <Textarea id={"message"} name={"message"} value={formData.message} onChange={handleChange} />
