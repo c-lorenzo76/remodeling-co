@@ -22,7 +22,7 @@ export const Work = () => {
 
     return (
         <div className={"h-fit"}>
-            <div className={"w-[80%] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4"}>
+            <div className={"w-[80%] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4"}>
                 <Card className={"mx-auto w-full max-w-[350px] bg-[#EEEEEE]"}>
                     <CardHeader>
                         <CardTitle>

@@ -13,7 +13,7 @@ export const Home = () => {
     return (
         <div className={"min-h-screen w-full flex-col"}>
             <Header/>
-            <div className={"space-y-8 lg:space-y-10 bg-gradient-to-b from-gray-600 to-gray-950"}>
+            <div className={"space-y-8 lg:space-y-10  "}>
                 <Navigation/>
                 <About/>
                 <Services/>
@@ -26,3 +26,5 @@ export const Home = () => {
         </div>
     )
 }
+
+//bg-gradient-to-b from-gray-600 to-gray-950

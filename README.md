@@ -8,6 +8,14 @@ Created a website for my brother-in-law's remodeling company.
 >- Server: Golang
 
 ## Updates
+10/16 <br>
+Feedback: 
+- change the background for the landing page. It doesn't look much like a remodeling site. <br>
+- change website colors, lighter, warmer <br>
+- the text with the about component make it over the image, remove background dot<br>
+- make the services/work be 4 columns so the text above doesn't look weird
+<br>
+
 10/15 <br>
 I finished the front-end I just need to make some minor tweaks, but it should be fine. 
 The thing I'm going to do is create a new email for noreplys. I have to fix the landing page

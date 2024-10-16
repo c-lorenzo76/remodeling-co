@@ -23,18 +23,18 @@ export const Layout = ({ children }: LayoutProps) => {
     return (
         <div className="min-h-screen flex flex-col font-afacad bg-gradient-to-b from-[#393E46] to-[#222831]">
             <Header/>
-            <div className={"lg:w-[80%] w-full py-4 lg:bg-transparent flex flex-row items-center mx-auto h-fit bg-[#393E46]"}>
+            <div className={"lg:w-[80%] w-full py-4 bg-[#607274] lg:bg-transparent flex flex-row items-center mx-auto h-fit "}>
                 <img src={logo} alt="Company Logo" className="shadow-lg rounded-2xl object-cover h-24 mx-4"/>
                 <Breadcrumb>
                     <BreadcrumbList>
                         <BreadcrumbItem>
-                            <Link to="/" className={"text-[#EEEEEE] hover:text-[#EEEEEE]/60 hover:-translate-y-0.5 transform transition duration-200 text-lg"}>
+                            <Link to="/" className={"text-[#FAF7F0] hover:text-[#FAF7F0]/60 hover:-translate-y-0.5 transform transition duration-200 text-lg"} style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}>
                                 Home
                             </Link>
                         </BreadcrumbItem>
                         <BreadcrumbSeparator />
                         <BreadcrumbItem>
-                            <BreadcrumbPage className={"text-[#EEEEEE]/60 text-lg"}>
+                            <BreadcrumbPage className={"text-[#FAF7F0]/70 text-lg"} style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}>
                                 {currentPage.charAt(0).toUpperCase() + currentPage.slice(1)}
                             </BreadcrumbPage>
                         </BreadcrumbItem>
