@@ -8,6 +8,13 @@ Created a website for my brother-in-law's remodeling company.
 >- Server: Golang
 
 ## Updates
+10/15 <br>
+I finished the front-end I just need to make some minor tweaks, but it should be fine. 
+The thing I'm going to do is create a new email for noreplys. I have to fix the landing page
+the text on mobile devices is almost going out of place. Then just finish the about page and
+if I really want to add the map on the contact when the screen is lg. 
+<br>
+
 10/11 <br>
 Okay I managed to fix the inputOTP the way I was originally doing it was stupid. I also added a toast
 for when they post the form. I'm going to start the other pages but this project is practically done. 

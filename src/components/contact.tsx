@@ -14,8 +14,10 @@ import { FaFacebookSquare, FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdOutlineAccessTimeFilled } from "react-icons/md";
 import { Button } from "@/components/ui/button.tsx";
-import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp";
+import { REGEXP_ONLY_DIGITS } from "input-otp";
 import { useToast } from "@/hooks/use-toast"
+
+
 
 export const Contact = () => {
     const { toast } = useToast()
@@ -92,7 +94,7 @@ export const Contact = () => {
                         <InputOTP
                             id={"phone"}
                             maxLength={10}
-                            pattern={REGEXP_ONLY_DIGITS_AND_CHARS}
+                            pattern={REGEXP_ONLY_DIGITS}
                             value={formData.phone}
                             onChange={handleOTPChange}
                             required={true}
@@ -153,7 +155,7 @@ export const Contact = () => {
                         </li>
                         <li className={"flex flex-row items-center"}>
                             <FaPhoneAlt className={"mx-2 h-[14px] w-[14px]"} />
-                            <h1>(919)799-0388</h1>
+                            <h1>(919)548-9646</h1>
                         </li>
                         <li className={"flex flex-row items-center"}>
                             <IoMdMail className={"mx-2"} />
