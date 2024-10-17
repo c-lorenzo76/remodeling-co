@@ -13,16 +13,16 @@ export const Home = () => {
     return (
         <div className={"min-h-screen w-full flex-col"}>
             <Header/>
-            <div className={"space-y-8 lg:space-y-10  "}>
-                <Navigation/>
-                <About/>
+            <Navigation/>
+            <About/>
+            <div className={"background-2 space-y-5 lg:space-y-10 py-10"}>
                 <Services/>
                 <Work/>
-                <Reviews />
-                <Contact/>
+                <Reviews/>
             </div>
-            <Footer />
-            <Toaster />
+            <Contact/>
+            <Footer/>
+            <Toaster/>
         </div>
     )
 }

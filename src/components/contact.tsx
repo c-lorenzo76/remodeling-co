@@ -9,7 +9,7 @@ import {
     InputOTPSlot,
 } from "@/components/ui/input-otp";
 import { Textarea } from "@/components/ui/textarea";
-import { IoMdMail } from "react-icons/io";
+// import { IoMdMail } from "react-icons/io";
 import { FaFacebookSquare, FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdOutlineAccessTimeFilled } from "react-icons/md";
@@ -77,12 +77,12 @@ export const Contact = () => {
 
     return (
         <div className={"bg-[#EEEEEE] mx-auto h-fit font-afacad"}>
-            <div className={"text-center py-10"}>
+            <div className={"text-center py-10 "}>
                 <h1 className={"text-7xl"}>Contact us</h1>
-                <p className={"text-2xl font-light"}>We'll connect with you as soon as we can</p>
+                <p className={"text-xl font-light"}>We'll connect with you as soon as we can</p>
             </div>
-            <div className={"lg:w-[70%] mx-auto flex flex-col lg:flex-row lg:py-10"}>
-                <div className={"mx-auto space-y-2"}>
+            <div className={"w-full sm:w-2/3 lg:w-[70%] mx-auto flex flex-col lg:flex-row pb-10 "}>
+                <div className={"mx-auto space-y-2 w-[90%] lg:w-[55%]"}>
                     <form onSubmit={handleSubmit} >
                         <Label htmlFor={"fName"}>First Name *</Label>
                         <Input id={"fName"} name={"fName"} type={"text"} placeholder={"First Name"} value={formData.fName} onChange={handleChange} required={true} />
@@ -91,33 +91,39 @@ export const Contact = () => {
                         <Input id={"lName"} name={"lName"} type={"text"} placeholder={"Last Name"} value={formData.lName} onChange={handleChange} required={true} />
 
                         <Label htmlFor={"phone"}>Phone *</Label>
-                        <InputOTP
-                            id={"phone"}
-                            maxLength={10}
-                            pattern={REGEXP_ONLY_DIGITS}
-                            value={formData.phone}
-                            onChange={handleOTPChange}
-                            required={true}
-                        >
-                            <InputOTPGroup>
-                                <InputOTPSlot index={0} />
-                                <InputOTPSlot index={1} />
-                                <InputOTPSlot index={2} />
-                            </InputOTPGroup>
-                            <InputOTPSeparator />
-                            <InputOTPGroup>
-                                <InputOTPSlot index={3} />
-                                <InputOTPSlot index={4} />
-                                <InputOTPSlot index={5} />
-                            </InputOTPGroup>
-                            <InputOTPSeparator />
-                            <InputOTPGroup>
-                                <InputOTPSlot index={6} />
-                                <InputOTPSlot index={7} />
-                                <InputOTPSlot index={8} />
-                                <InputOTPSlot index={9} />
-                            </InputOTPGroup>
-                        </InputOTP>
+                        <div className={"block md:hidden"}>
+                            <Input id={"phone"} name={"phone"} type={"tel"} placeholder={"Phone number"} value={formData.phone} onChange={handleChange} required={true} />
+                        </div>
+                        <div className={"hidden md:block "}>
+                            <InputOTP
+                                id={"phone"}
+                                maxLength={10}
+                                pattern={REGEXP_ONLY_DIGITS}
+                                value={formData.phone}
+                                onChange={handleOTPChange}
+                                required={true}
+                            >
+                                <InputOTPGroup>
+                                    <InputOTPSlot index={0} />
+                                    <InputOTPSlot index={1} />
+                                    <InputOTPSlot index={2} />
+                                </InputOTPGroup>
+                                <InputOTPSeparator />
+                                <InputOTPGroup>
+                                    <InputOTPSlot index={3} />
+                                    <InputOTPSlot index={4} />
+                                    <InputOTPSlot index={5} />
+                                </InputOTPGroup>
+                                <InputOTPSeparator />
+                                <InputOTPGroup>
+                                    <InputOTPSlot index={6} />
+                                    <InputOTPSlot index={7} />
+                                    <InputOTPSlot index={8} />
+                                    <InputOTPSlot index={9} />
+                                </InputOTPGroup>
+                            </InputOTP>
+                        </div>
+
 
                         <Label htmlFor={"email"}>Email *</Label>
                         <Input id={"email"} name={"email"} type={"email"} placeholder={"jdoe@gmail.com"} value={formData.email} onChange={handleChange} required={true} />
@@ -137,7 +143,7 @@ export const Contact = () => {
                         <Button type={"submit"} className={"w-full mt-4"}>Submit</Button>
                     </form>
                 </div>
-                <div className={"w-[80%] lg:w-[50%] mx-auto py-10 lg:py-0"}>
+                <div className={"w-[80%] lg:w-[50%] mx-auto py-10 lg:py-0 lg:ml-4"}>
                     <h2 className={"text-3xl underline"}>Contact information</h2>
                     <ul className={"gap-4"}>
                         <li className={"flex flex-col items-start"}>
@@ -157,13 +163,13 @@ export const Contact = () => {
                             <FaPhoneAlt className={"mx-2 h-[14px] w-[14px]"} />
                             <h1>(919)548-9646</h1>
                         </li>
-                        <li className={"flex flex-row items-center"}>
-                            <IoMdMail className={"mx-2"} />
-                            cristian@gmail.com
-                        </li>
+                        {/*<li className={"flex flex-row items-center"}>*/}
+                        {/*    <IoMdMail className={"mx-2"} />*/}
+                        {/*    cristian@gmail.com*/}
+                        {/*</li>*/}
                         <li className={"flex flex-row items-center"}>
                             <FaFacebookSquare className={"mx-2"} />
-                            Flores and Sons remodeling
+                            Flores and Sons Remodeling
                         </li>
                     </ul>
                 </div>

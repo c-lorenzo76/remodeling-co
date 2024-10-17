@@ -6,7 +6,7 @@ import {Layout} from "@/pages/Layout";
 export const AboutPage = () => {
     return (
         <Layout >
-            <div className={"h-fit py-10 w-[80%] mx-auto  text-[#EEEEEE] flex flex-col justify-center items-center"}>
+            <div className={"h-fit py-10 w-[80%] mx-auto  text-[#EEEEEE] flex flex-col justify-center items-center z-10"}>
                 <h1 className={"text-6xl font-light"}>About</h1>
                 <div className={"lg:w-2/3 mx-auto my-2"}>
                     <p className={"text-center"}>

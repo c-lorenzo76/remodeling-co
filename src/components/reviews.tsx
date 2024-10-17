@@ -36,8 +36,8 @@ export const Reviews = () => {
     ];
 
     return (
-        <div className={"h-fit w-full text-[#EEEEEE] font-afacad"}>
-            <div className={"w-[80%] mx-auto"}>
+        <div className={"h-fit w-full text-black font-afacad"}>
+            <div className={"w-[90%] lg:w-[80%] mx-auto"}>
                 <h1 className={"font-light text-4xl text-center"}>Reviews</h1>
                 <p className={"font-bold text-5xl text-center"}>See what people say about us!</p>
                 <div
