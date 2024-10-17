@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --dark-slate: #4A4947;
+    --darker-slate: #363432;
+}
+
+
 .background {
     background-image: url('https://new.express.adobe.com/webpage/DMVgkp7CXqbrJ/resources/4aae8b4d-a428-4343-9429-540d155aa3b5-4568px?asset_id=4aae8b4d-a428-4343-9429-540d155aa3b5&image_assets=false&size=4568');
     background-size: cover;

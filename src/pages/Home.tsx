@@ -14,8 +14,9 @@ export const Home = () => {
         <div className={"min-h-screen w-full flex-col"}>
             <Header/>
             <Navigation/>
-            <About/>
-            <div className={"background-2 space-y-5 lg:space-y-10 py-10"}>
+
+            <div className={"background-3 space-y-5 lg:space-y-10 py-10"}>
+                <About/>
                 <Services/>
                 <Work/>
                 <Reviews/>

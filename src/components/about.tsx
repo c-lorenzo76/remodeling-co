@@ -10,21 +10,22 @@ import {
 
 export const About = () => {
     return (
-        <div className={"h-fit py-10 mx-auto flex flex-col justify-center md:flex-row font-afacad background-3"}>
-            <div className={"hidden relative md:block md:w-4/5 border-4 items-center justify-center"}>
+        <div className={"h-fit py-10 mx-auto flex flex-col justify-center md:flex-row font-afacad"}>
+            <div className={"hidden relative md:block md:w-3/4 items-center justify-center"}>
                 <img
                     src={"https://new.express.adobe.com/webpage/DMVgkp7CXqbrJ/resources/036eac26-4a6a-44e0-a75d-73dc335dd568-3840px?asset_id=036eac26-4a6a-44e0-a75d-73dc335dd568&image_assets=false&size=3840"}
-                    alt={"Living Room"} className={"rounded shadow-xl"}/>
+                    alt={"Living Room"} className={"rounded shadow-2xl"}/>
 
                 <div className={"absolute bottom-0 right-0 w-3/5 mx-auto"}>
-                    <Card className={"bg-gradient-to-b from-[#6D6B68] to-[#2C2B28] text-[#EEEEEE] w-full shadow-md"}>
+                    <Card
+                        className={"rounded-none border-none bg-gradient-to-b from-[#6D6B68] to-[#2C2B28] text-[#EEEEEE] w-full shadow-md"}>
                         <CardHeader>
-                            <CardTitle className={"text-4xl font-semibold"}
-                                       style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}>
+                            <CardTitle className={"text-4xl font-semibold"} style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}
+                            >
                                 Flores and Sons Remodeling
                             </CardTitle>
                         </CardHeader>
-                        <CardContent style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}>
+                        <CardContent>
                             Bring your vision to life! Let us handle the hard work while you enjoy your dream home.
                             We take pride in our work, treating every project as if it were our own, ensuring top
                             craftsmanship and attention to detail.
@@ -36,14 +37,14 @@ export const About = () => {
             </div>
             <div className={"md:hidden flex flex-col justify-center text-center w-full md:w-3/4 lg:w-2/5"}>
                 <Card
-                    className={"bg-gradient-to-b from-[#6D6B68] to-[#2C2B28] text-[#EEEEEE] w-[85%] md:w-2/3 mx-auto shadow-md"}>
+                    className={"rounded-none border-none bg-gradient-to-b from-[#6D6B68] to-[#2C2B28] text-[#EEEEEE] w-[85%] md:w-2/3 mx-auto shadow-md"}>
                     <CardHeader>
-                        <CardTitle className={"text-4xl font-semibold"}
-                                   style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}>
+                        <CardTitle className={"text-4xl font-semibold"} style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}
+                        >
                             Flores and Sons Remodeling
                         </CardTitle>
                     </CardHeader>
-                    <CardContent className={"text-center"} style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}>
+                    <CardContent className={"text-center"} >
                         Bring your vision to life! Let us handle the hard work while you enjoy your dream home.
                         We take pride in our work, we treat every project as if it were our own, ensuring top
                         craftsmanship and attention to detail.
