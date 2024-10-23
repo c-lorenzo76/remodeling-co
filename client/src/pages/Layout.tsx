@@ -28,13 +28,13 @@ export const Layout = ({ children }: LayoutProps) => {
                 <Breadcrumb>
                     <BreadcrumbList>
                         <BreadcrumbItem>
-                            <Link to="/" className={"text-[#FAF7F0] hover:text-[#FAF7F0]/60 hover:-translate-y-0.5 transform transition duration-200 text-lg"} style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}>
+                            <Link to="/" className={"text-white z-50 hover:text-[#FAF7F0]/60 hover:-translate-y-0.5 transform transition duration-200 text-lg"} >
                                 Home
                             </Link>
                         </BreadcrumbItem>
-                        <BreadcrumbSeparator />
+                        <BreadcrumbSeparator/>
                         <BreadcrumbItem>
-                            <BreadcrumbPage className={"text-[#FAF7F0]/70 text-lg"} style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}>
+                            <BreadcrumbPage className={"text-[#FAF7F0]/70 text-lg"}>
                                 {currentPage.charAt(0).toUpperCase() + currentPage.slice(1)}
                             </BreadcrumbPage>
                         </BreadcrumbItem>
