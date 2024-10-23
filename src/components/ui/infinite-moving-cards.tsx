@@ -1,7 +1,7 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import React, { useEffect, useState } from "react";
+import {cn} from "@/lib/utils";
+import React, {useEffect, useState} from "react";
 
 export const InfiniteMovingCards = ({
                                         items,
@@ -13,7 +13,7 @@ export const InfiniteMovingCards = ({
     items: {
         quote: string;
         name: string;
-        title: string;
+        date: string;
     }[];
     direction?: "left" | "right";
     speed?: "fast" | "normal" | "slow";
@@ -27,6 +27,7 @@ export const InfiniteMovingCards = ({
         addAnimation();
     }, []);
     const [start, setStart] = useState(false);
+
     function addAnimation() {
         if (containerRef.current && scrollerRef.current) {
             const scrollerContent = Array.from(scrollerRef.current.children);
@@ -43,6 +44,7 @@ export const InfiniteMovingCards = ({
             setStart(true);
         }
     }
+
     const getDirection = () => {
         if (containerRef.current) {
             if (direction === "left") {
@@ -90,7 +92,7 @@ export const InfiniteMovingCards = ({
                         className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px]"
                         style={{
                             background: "linear-gradient(180deg, var(--dark-slate), var(--darker-slate))"
-                                // "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
+                            // "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
                         }}
                         key={item.name}
                     >
@@ -103,12 +105,12 @@ export const InfiniteMovingCards = ({
                 {item.quote}
               </span>
                             <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
+                <span className="flex flex-col gap-1 ">
                   <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                    {item.name}
+                    {item.date}
                   </span>
                   <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                    {item.title}
+                    {item.name}
                   </span>
                 </span>
                             </div>

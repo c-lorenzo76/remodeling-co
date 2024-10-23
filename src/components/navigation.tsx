@@ -26,7 +26,7 @@ export const Navigation = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to={"/Services"}>
+                        <Link to={"/Gallery"}>
                             <Button
                                 className={"text-lg md:text-xl bg-transparent hover:bg-transparent shadow-none text-[#EEEEEE] hover:text-[#EEEEEE]/40"}
                                 style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}>

@@ -4,6 +4,7 @@ import {Home} from "@/pages/Home"
 import {AboutPage} from "@/pages/AboutPage.tsx"
 import {ServicesPage} from "@/pages/ServicesPage.tsx";
 import {ContactPage} from "@/pages/ContactPage.tsx";
+import {GalleryPage} from "@/pages/GalleryPage.tsx"
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
               <Route path={"About"} element={<AboutPage />} />
               <Route path={"Services"} element={<ServicesPage />} />
               <Route path={"Contact"} element={<ContactPage />} />
+              <Route path={"Gallery"} element={<GalleryPage />} />
           </Routes>
       </BrowserRouter>
   )
