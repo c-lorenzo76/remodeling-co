@@ -44,7 +44,7 @@ export const Contact = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:8080/new-client", {
+            const response = await fetch("http://44.195.52.72:8080/new-client", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
