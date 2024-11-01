@@ -12,13 +12,6 @@ import (
 	"os"
 )
 
-const (
-	smtpHost = "smtp.gmail.com"
-	smtpPort = 587
-	smtpUser = "cristianlorenzo682@gmail.com"
-	smtpPass = "pile axsf dnma pqbv"
-)
-
 func getClients(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {
 		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
@@ -98,52 +91,21 @@ func postClient(w http.ResponseWriter, r *http.Request) {
 
 }
 
-//func checkEmail(w http.ResponseWriter, r *http.Request) {
-//	if r.Method != http.MethodGet {
-//		http.Error(w, http.StatusText(http.StatusMethodNotAllowed), http.StatusMethodNotAllowed)
-//		return
-//	}
-//
-//	/*
-//		I use client here to avoid having to create a whole new struct,
-//		this request only has "email" but I assign it into a client struct. This is for future reference.
-//	*/
-//	var emailCheck client
-//
-//	err := json.NewDecoder(r.Body).Decode(&emailCheck)
-//	if err != nil {
-//		http.Error(w, err.Error(), http.StatusBadRequest)
-//		return
-//	}
-//
-//	emailExists, err := checkClientExists(emailCheck)
-//	if err != nil {
-//		log.Printf("Error checking client exists: %v", err)
-//		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
-//		return
-//	}
-//
-//	w.Header().Set("Content-Type", "applications/json")
-//
-//	if err := json.NewEncoder(w).Encode(emailExists); err != nil {
-//		log.Printf("Error encoding email: %v", err)
-//		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
-//	}
-//
-//	print("email checked\n")
-//
-//}
-
 func sendMail(cc string, fullName string, subject string, body string) error {
 
+	dialer := gomail.Dialer{
+		Host:     os.Getenv("SMTP_HOST"),
+		Port:     587,
+		Username: os.Getenv("SMTP_USER"),
+		Password: os.Getenv("SMTP_PASS"),
+	}
+
 	msg := gomail.NewMessage()
-	msg.SetHeader("From", smtpUser)               // should be a new NOREPLY email
+	msg.SetHeader("From", dialer.Username)        // should be a new NOREPLY email
 	msg.SetHeader("To", "c.lorenzopav@gmail.com") // should be email of COMPANY
 	msg.SetAddressHeader("Cc", cc, fullName)      // cc CLIENT name
 	msg.SetHeader("Subject", subject)
 	msg.SetBody("text/html", body)
-
-	dialer := gomail.NewDialer(smtpHost, smtpPort, smtpUser, smtpPass)
 
 	if err := dialer.DialAndSend(msg); err != nil {
 		return fmt.Errorf("error sending email: %v", err)
@@ -158,8 +120,8 @@ func main() {
 		User:   os.Getenv("DBUSER"),
 		Passwd: os.Getenv("DBPASS"),
 		Net:    "tcp",
-		Addr:   "localhost:3306",
-		DBName: "remodeling",
+		Addr:   os.Getenv("DBADDR"),
+		DBName: os.Getenv("DBNAME"),
 	}
 
 	var err error
@@ -177,7 +139,6 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/clients", getClients)
 	mux.HandleFunc("/new-client", postClient)
-	//mux.HandleFunc("/check-email", checkEmail)
 
 	handler := cors.Default().Handler(mux)
 
