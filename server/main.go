@@ -137,11 +137,18 @@ func main() {
 	fmt.Println("Connected!")
 
 	mux := http.NewServeMux()
-	mux.HandleFunc("/clients", getClients)
-	mux.HandleFunc("/new-client", postClient)
+	mux.HandleFunc("/api/clients", getClients)
+	mux.HandleFunc("/api/new-client", postClient)
 
-	handler := cors.Default().Handler(mux)
+	// "http://localhost:5173"
+	corsOptions := cors.New(cors.Options{
+		AllowedOrigins:   []string{"http://44.195.52.72", "http://localhost:5173"},
+		AllowedMethods:   []string{"GET", "POST", "OPTIONS"},
+		AllowedHeaders:   []string{"Content-Type"},
+		AllowCredentials: true,
+	})
+	handler := corsOptions.Handler(mux)
 
 	fmt.Println("Server running on port 8080")
-	log.Fatal(http.ListenAndServe(":8080", handler))
+	log.Fatal(http.ListenAndServe("0.0.0.0:8080", handler))
 }
