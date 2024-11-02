@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Restart services
+        uses: JimCronqvist/action-ssh@master
+        with:
+          hosts: ${{ secrets.HOST_CONNECTION_STRING }}
+          privateKey: ${{ secrets.PRIVATE_KEY }}
+          debug: true
+          command: | 
+            cd /home/ubuntu/remodeling-co
+            
+            git pull origin main
+            
+            cd client
+            npm install
+            npm run build
+            
+            sudo systemctl restart nginx
+            
+            sudo systemctl restart go-server
