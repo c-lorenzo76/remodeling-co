@@ -9,7 +9,7 @@
 
 
 .background {
-    background-image: url('https://new.express.adobe.com/webpage/DMVgkp7CXqbrJ/resources/4aae8b4d-a428-4343-9429-540d155aa3b5-4568px?asset_id=4aae8b4d-a428-4343-9429-540d155aa3b5&image_assets=false&size=4568');
+    background-image: url('/images/navigation_bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,7 +39,7 @@
 }
 
 .background-3 {
-    background-image: url('https://new.express.adobe.com/webpage/DMVgkp7CXqbrJ/resources/c71f0fc0-aa3a-498b-bbcf-5ef4f944a2a2-3846px?asset_id=c71f0fc0-aa3a-498b-bbcf-5ef4f944a2a2&image_assets=false&size=3846');
+    background-image: url('/images/bg_3.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

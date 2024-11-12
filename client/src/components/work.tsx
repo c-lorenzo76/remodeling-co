@@ -13,7 +13,7 @@ export const Work = () => {
                 <Card className={"mx-auto w-full max-w-[400px] bg-[#EEEEEE] shadow-xl border-none"}>
                     <CardHeader className={"p-4"} />
                     <CardContent>
-                        {/*../src/assets/images/IMG_4145.JPG*/}
+                        {/*../src/assets/work_images/IMG_4145.JPG*/}
                         {/*https://plus.unsplash.com/premium_photo-1680382578857-c331ead9ed51?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a2l0Y2hlbiUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D*/}
                         <img alt={"kitchen_img"} className={"aspect-square rounded object-cover"} src={"/images/IMG_4145.JPG"} />
                     </CardContent>

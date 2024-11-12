@@ -21,9 +21,10 @@ export const Layout = ({ children }: LayoutProps) => {
     const currentPage = location.pathname.split("/").filter(Boolean).pop() || "Home";
 
     return (
-        <div className="min-h-screen flex flex-col font-afacad bg-gradient-to-b from-[#393E46] to-[#222831]">
+        // bg-gradient-to-b from-[#393E46] to-[#222831]
+        <div className="min-h-screen flex flex-col font-afacad bg-gradient-to-b from-[#42413E] to-[#2E2D2B] ">
             <Header/>
-            <div className={"lg:w-[80%] w-full py-4 bg-[#343131] lg:bg-transparent flex flex-row items-center mx-auto h-fit "}>
+            <div className={"lg:w-[80%] w-full py-4 bg-[#343131]okay lg:bg-transparent flex flex-row items-center mx-auto h-fit "}>
                 <img src={logo} alt="Company Logo" className="shadow-lg rounded-2xl object-cover h-24 mx-4"/>
                 <Breadcrumb>
                     <BreadcrumbList>
