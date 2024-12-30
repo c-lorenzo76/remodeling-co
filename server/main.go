@@ -7,6 +7,7 @@ import (
 	"github.com/go-sql-driver/mysql"
 	"github.com/rs/cors"
 	"gopkg.in/gomail.v2"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -34,6 +35,47 @@ func getClients(w http.ResponseWriter, r *http.Request) {
 	print("clients retrieved\n")
 }
 
+func verifyEmail(email string) (bool, error) {
+	emailToken := os.Getenv("huntKey")
+	url := fmt.Sprintf("https://api.hunter.io/v2/email-verifier?email=%s&api_key=%s", email, emailToken)
+
+	// Failed to send the message. Please try again.
+	resp, err := http.Get(url)
+	if err != nil {
+		log.Printf("failed to make the request: %v", err)
+		return false, nil
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		log.Printf("returned status code: %v", resp.Status)
+		return false, nil
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		log.Printf("failed to read response body: %v", err)
+		return false, nil
+	}
+
+	var result HunterResponse
+	if err := json.Unmarshal(body, &result); err != nil {
+		log.Printf("failed to parse JSON: %v", err)
+		return false, nil
+	}
+
+	if result.Error != "" {
+		log.Printf("Hunter API error: %s", result.Error)
+		return false, nil
+	}
+
+	if (result.Data.Status == "valid" || result.Data.Status == "accept_all") && result.Data.Score > 40 {
+		return true, nil
+	}
+
+	return false, nil
+}
+
 func postClient(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		w.WriteHeader(http.StatusMethodNotAllowed)
@@ -47,6 +89,28 @@ func postClient(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	if newClient.Fname == "" || newClient.Lname == "" || newClient.Phone == "" ||
+		newClient.Email == "" || newClient.Address == "" || newClient.City == "" || newClient.Zipcode == "" {
+		http.Error(w, "All fields are required", http.StatusBadRequest)
+		return
+	}
+
+	// Checks to see if the email is real
+	// this error is for the api request
+	isValid, err := verifyEmail(newClient.Email)
+	if err != nil {
+		log.Printf("Error verifying email: %v", err)
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
+	}
+
+	// this error is if the email is actually valid
+	if !isValid {
+		http.Error(w, "Invalid email address", http.StatusBadRequest)
+		return
+	}
+
+	// Checks to see if the email exists in the database
 	emailExists, err := checkClientExists(newClient.Email)
 	if err != nil {
 		log.Printf("Error checking if client exists: %v", err)

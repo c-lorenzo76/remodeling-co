@@ -10,8 +10,8 @@ export const Navigation = () => {
                     <li>
                         <Link to={"/About"}>
                             <Button
-                                className={"text-lg md:text-xl bg-transparent hover:bg-transparent shadow-none text-[#EEEEEE] hover:text-[#EEEEEE]/40"}
-                                style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}>
+                                className={"text-lg md:text-xl bg-transparent hover:bg-transparent shadow-none hover:text-[#EEEEEE]/40"}
+                                >
                                 ABOUT
                             </Button>
                         </Link>
@@ -19,8 +19,8 @@ export const Navigation = () => {
                     <li>
                         <Link to={"/Services"}>
                             <Button
-                                className={"text-lg md:text-xl bg-transparent hover:bg-transparent shadow-none text-[#EEEEEE] hover:text-[#EEEEEE]/40"}
-                                style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}>
+                                className={"text-lg md:text-xl bg-transparent hover:bg-transparent shadow-none hover:text-[#EEEEEE]/40"}
+                                >
                                 SERVICES
                             </Button>
                         </Link>
@@ -28,8 +28,8 @@ export const Navigation = () => {
                     <li>
                         <Link to={"/Gallery"}>
                             <Button
-                                className={"text-lg md:text-xl bg-transparent hover:bg-transparent shadow-none text-[#EEEEEE] hover:text-[#EEEEEE]/40"}
-                                style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}>
+                                className={"text-lg md:text-xl bg-transparent hover:bg-transparent shadow-none hover:text-[#EEEEEE]/40"}
+                                >
                                 GALLERY
                             </Button>
                         </Link>
@@ -37,8 +37,8 @@ export const Navigation = () => {
                     <li>
                         <Link to={"/Contact"}>
                             <Button
-                                className={"text-lg md:text-xl bg-transparent hover:bg-transparent shadow-none text-[#EEEEEE] hover:text-[#EEEEEE]/40"}
-                                style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)"}}>
+                                className={"text-lg md:text-xl bg-transparent hover:bg-transparent shadow-none hover:text-[#EEEEEE]/40"}
+                                >
                                 CONTACT
                             </Button>
                         </Link>

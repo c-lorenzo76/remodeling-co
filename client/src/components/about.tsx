@@ -15,7 +15,9 @@ export const About = () => {
                 <img
                     // src={"../src/assets/work_images/IMG_4145.JPG"}
                     src={'/images/about_bg.png'}
-                    alt={"Living Room"} className={"rounded shadow-2xl"}/>
+                    alt={"Living Room"} className={"rounded shadow-2xl"}
+                    loading={"lazy"}
+                />
 
                 {/*from-[#6D6B68] to-[#2C2B28]*/}
                 <div className={"absolute bottom-0 right-0 w-3/5 mx-auto"}>

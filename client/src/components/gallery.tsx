@@ -24,7 +24,7 @@ const images = [
 
 export const Gallery = () => {
     const plugin = React.useRef(
-        Autoplay({delay: 5000, stopOnInteraction: true})
+        Autoplay({delay: 3000, stopOnInteraction: true})
     )
     return (
         <div className={"h-fit w-[80%] mx-auto py-5 pb-10"}>
@@ -32,21 +32,21 @@ export const Gallery = () => {
                 <h1 className={"text-6xl font-light"}>Gallery</h1>
             </div>
 
-            <div className={"w-[90%] max-w-xl mx-auto flex flex-col mt-16 lg:mt-0  items-center"}>
+            <div className={"w-[90%] max-w-xl mx-auto flex flex-col mt-16 lg:mt-0 items-center"}>
                 <Carousel
                     plugins={[plugin.current]}
                     className={"w-full max-w-full"}
                     onMouseEnter={plugin.current.stop}
                     onMouseLeave={plugin.current.reset}
                 >
-                    <CarouselContent>
+                    <CarouselContent >
                         {images.map((image, index) => (
                             <CarouselItem key={index}>
-                                <Card>
+                                <Card className={"bg-transparent border-0"}>
                                     <CardContent
                                         className="flex aspect-square w-full max-w-full h-full max-h-full items-center justify-center p-6">
                                         <img src={image} alt={`Gallery image ${index + 1}`}
-                                             className="w-full h-full object-cover"/>
+                                             className="w-full h-full object-cover "/>
                                     </CardContent>
                                 </Card>
                             </CarouselItem>
@@ -60,26 +60,4 @@ export const Gallery = () => {
 
         </div>
     )
-}
-{/*{Array.from({length: 5}).map((_, index) => (*/
-}
-{/*    <CarouselItem key={index}>*/
-}
-{/*        <div className="p-1">*/
-}
-{/*            <Card>*/
-}
-{/*                <CardContent className="flex aspect-square items-center justify-center p-6">*/
-}
-{/*                    <span className="text-4xl font-semibold">{index + 1}</span>*/
-}
-{/*                </CardContent>*/
-}
-{/*            </Card>*/
-}
-{/*        </div>*/
-}
-{/*    </CarouselItem>*/
-}
-{/*))}*/
 }
